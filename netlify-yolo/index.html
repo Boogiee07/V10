@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YOLOv10 Web Demo</title>
+  <script src="yolov10.js"></script>
+  <script src="firebase.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>YOLOv10 Detection</h1>
+  <video id="webcam" autoplay playsinline width="640" height="480"></video>
+  <canvas id="canvas" width="640" height="480"></canvas>
+  <script>
+    initYOLO(); // defined in yolov10.js
+  </script>
+</body>
+</html>
