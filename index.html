@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YOLOv10 Web Demo with Tracking</title>
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <script src="tracker.js"></script>
+  <script src="yolov10.js" defer></script>
+  <script src="firebase.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>YOLOv10 Detection + SimpleTracker (SORT-like)</h1>
+  <video id="webcam" autoplay playsinline width="640" height="480" style="display:none"></video>
+  <canvas id="canvas" width="640" height="480"></canvas>
+  <p>Note: This uses a lightweight IOU tracker. To upgrade to DeepSORT, add an appearance model and a Kalman filter.</p>
+  <script>
+    // initYOLO is called from yolov10.js automatically when loaded (it defines initYOLO and calls it)
+    // but to be explicit, call it on load:
+    window.addEventListener('load', ()=>{ if (typeof initYOLO==='function') initYOLO(); });
+  </script>
+</body>
+</html>
