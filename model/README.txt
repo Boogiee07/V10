@@ -1,1 +1,0 @@
-Place your yolov10n.onnx model file here.
